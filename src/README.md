@@ -31,6 +31,7 @@ The purpose of the Schlep is to provide a type of ride sharing service that allo
 **Marc Bittle**
 
 **Josiah Stadler**
+*"Currently a senior at UNCG completing a Computer Science degree with a concentration in Data Science. In my past career I was exposed to various new applications that allowed me to do my job more effectively. Some of these applications worked well and others fell short. This got me interested in exploring ways to bridge the gap between developers and end users."*
 
 **Katelynn Urgitus**
 
