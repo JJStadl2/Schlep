@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="469.0" style="-fx-background-color: PEACHPUFF;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Controllers.AdditionalNeedsPerController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="53.0" layoutY="14.0" prefHeight="235.0" prefWidth="363.0" spacing="15.0">
+         <children>
+            <ImageView id="logo" fx:id="logo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Documents/logo.PNG" />
+               </image>
+            </ImageView>
+            <MenuButton id="selectionMnBtn" fx:id="additionalItemMnBtn" mnemonicParsing="false" text="Select Additional Items Needed">
+              <items>
+                  <CheckMenuItem id="dolly" fx:id="dollyCheckMnBtn" mnemonicParsing="false" onAction="#checkItem" text="Dolly" />
+                  <CheckMenuItem id="handTruck" fx:id="handTruckCheckMnBtn" mnemonicParsing="false" onAction="#checkItem" text="Hand Truck" />
+                  <CheckMenuItem id="ramp" fx:id="rampCheckMnItem" mnemonicParsing="false" onAction="#checkItem" text="Ramp" />
+                  <CheckMenuItem id="assist" fx:id="assistCheckMnItem" mnemonicParsing="false" onAction="#checkItem" text="Driver Assistance(Additional Fee)" />
+              </items>
+            </MenuButton>
+            <MenuButton id="assist" fx:id="AssistTimeAmountMnBtn" mnemonicParsing="false" onAction="#selectTime" text="Estimated Time of Assistnce Needed" visible="false">
+              <items>
+                  <RadioMenuItem id="time30" fx:id="time30Rb" mnemonicParsing="false" onAction="#selectTime" text="30 Mintues" />
+                  <RadioMenuItem id="time1Hr" fx:id="time1HrRb" mnemonicParsing="false" onAction="#selectTime" text="1 Hour" />
+                  <RadioMenuItem id="time2Hr" fx:id="time2HrRb" mnemonicParsing="false" onAction="#selectTime" text="2 Hours" />
+                  <RadioMenuItem id="time3Hr" fx:id="time3HrRb" mnemonicParsing="false" onAction="#selectTime" text="3 Hours" />
+              </items>
+            </MenuButton>
+            <Button id="processBtn" fx:id="processBtn" mnemonicParsing="false" onAction="#showCost" style="-fx-background-color: POWDERBLUE;" text="Process" textFill="WHITE" />
+         </children>
+      </VBox>
+      <VBox id="outputVBox" fx:id="outputVBox" alignment="TOP_CENTER" layoutY="251.0" prefHeight="205.0" prefWidth="469.0" spacing="50.0" style="-fx-background-color: WHITE;">
+         <children>
+            <Label id="confirmedLbl" fx:id="confirmedLbl" alignment="CENTER" prefHeight="25.0" prefWidth="138.0" text="Delivery Details" underline="true" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label id="needsLbl" fx:id="needsLbl" prefHeight="20.0" prefWidth="460.0" text="Additional Items:" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label id="costLbl" fx:id="costLbl" prefHeight="20.0" prefWidth="457.0" text="Cost for Assistance:" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Button fx:id="nextBtn" disable="true" layoutX="364.0" layoutY="476.0" mnemonicParsing="false" onAction="#moveToNextPage" style="-fx-background-color: POWDERBLUE;" text="Next" textFill="WHITE" />
+      <Button fx:id="backBtn" layoutX="53.0" layoutY="476.0" mnemonicParsing="false" onAction="#movePrvPage" style="-fx-background-color: POWDERBLUE;" text="Back" textFill="WHITE" />
+   </children>
+</AnchorPane>

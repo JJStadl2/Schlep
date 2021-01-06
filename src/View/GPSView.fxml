@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="anchor" fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="469.0" style="-fx-background-color: PEACHPUFF;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Controllers.GPSViewController">
+   <children>
+      <HBox alignment="TOP_CENTER" layoutX="-1.0" layoutY="475.0" prefHeight="55.0" prefWidth="470.0" style="-fx-background-color: POWDERBLUE;">
+         <children>
+            <Label id="label" fx:id="label" style="-fx-font-weight: BOLD;" text="Your Schlepper Has Arrived" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Button id="NextBtn" fx:id="nextBtn" layoutX="413.0" layoutY="422.0" mnemonicParsing="false" onAction="#moveToNextPage" style="-fx-background-color: POWDERBLUE;" text="Next" textFill="WHITE" />
+      <Button id="backBtn" fx:id="backBtn" layoutX="14.0" layoutY="422.0" mnemonicParsing="false" onAction="#moveToPrvPage" style="-fx-background-color: POWDERBLUE;" text="Back" textFill="WHITE" />
+      <MediaView id="gpsMediaView" fx:id="gpsMediaView" fitHeight="415.0" fitWidth="469.0" />
+   </children>
+</AnchorPane>

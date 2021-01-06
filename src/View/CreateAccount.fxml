@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="510.0" prefWidth="575.0" style="-fx-background-color: peachpuff;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Controllers.CreateAccountController">
+   <children>
+      <VBox alignment="CENTER" fillWidth="false" layoutX="182.0" layoutY="99.0" prefHeight="390.0" prefWidth="211.0" spacing="15.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="252.0" text="Create Account">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="messageLbl" style="-fx-text-fill: #E3493B;" text="Label" />
+            <TextField fx:id="firstName" alignment="TOP_LEFT">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="lastName" alignment="TOP_LEFT">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="email" alignment="TOP_LEFT">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="phoneNumber" />
+            <PasswordField fx:id="password" />
+            <PasswordField fx:id="passwordConf" />
+            <Button fx:id="activateAcctBtn" mnemonicParsing="false" onAction="#activateAcctBtn" style="-fx-background-color: POWDERBLUE;" text="Activate Account" />
+            <Button fx:id="changeToLoginBtn" mnemonicParsing="false" onAction="#changeToLoginScreenBtn" prefHeight="25.0" prefWidth="284.0" style="-fx-background-color: POWDERBLUE;" text="Already have an account? Click here!" />
+         </children>
+      </VBox>
+      <Label alignment="CENTER_RIGHT" layoutX="76.0" layoutY="177.0" prefHeight="25.0" prefWidth="106.0" text="First Name" />
+      <Label alignment="CENTER_RIGHT" layoutX="76.0" layoutY="215.0" prefHeight="25.0" prefWidth="106.0" text="Last Name" />
+      <Label alignment="CENTER_RIGHT" layoutX="76.0" layoutY="255.0" prefHeight="25.0" prefWidth="106.0" text="Email Address" />
+      <Label alignment="CENTER_RIGHT" layoutX="76.0" layoutY="337.0" prefHeight="25.0" prefWidth="106.0" text="Password" />
+      <Label alignment="CENTER_RIGHT" layoutX="76.0" layoutY="379.0" prefHeight="25.0" prefWidth="106.0" text="Confrim Password" />
+      <ImageView fitHeight="91.0" fitWidth="200.0" layoutX="198.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Documents/logo.PNG" />
+         </image>
+      </ImageView>
+      <BorderPane layoutX="188.0" prefHeight="91.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 10;" />
+      <Label alignment="CENTER_RIGHT" layoutX="76.0" layoutY="302.0" prefHeight="17.0" prefWidth="106.0" text="PhoneNumber" />
+   </children>
+</AnchorPane>

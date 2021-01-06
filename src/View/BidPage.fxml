@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="531.0" style="-fx-background-color: PEACHPUFF;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Controllers.BidPageController">
+   <children>
+      <Label fx:id="BidLbl" layoutX="90.0" layoutY="131.0" prefHeight="18.0" prefWidth="351.0" text="Schleppers In Your Area Are Wlling to Schlep Your Item" />
+      <ImageView fx:id="logo" fitHeight="123.0" fitWidth="231.0" layoutX="145.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Documents/logo.PNG" />
+         </image>
+      </ImageView>
+      <HBox layoutX="22.0" layoutY="171.0" prefHeight="259.0" prefWidth="497.0" spacing="45.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="236.0" prefWidth="66.0" spacing="24.0">
+               <children>
+                  <Label id="driverLbl_1" fx:id="driver1Lbl" alignment="CENTER" prefHeight="26.0" prefWidth="54.0" text="Driver 1" />
+                  <Label id="driverLbl_2" fx:id="driver2Lbl" alignment="CENTER" text="Driver 2" />
+                  <Label id="driverLbl_3" fx:id="driver3Lbl" alignment="CENTER" text="Driver 3" />
+                  <Label id="driverLbl_4" fx:id="driver4Lbl" alignment="CENTER" text="Driver 4" />
+                  <Label id="driverLbl_5" fx:id="driver5Lbl" alignment="CENTER" text="Driver 5" />
+                  <Label id="driverLbl_6" fx:id="driver6Lbl" alignment="CENTER" text="Driver 6" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="259.0" prefWidth="56.0" spacing="24.0">
+               <children>
+                  <Label id="rating_1" fx:id="rating1Lbl" text="Rating" />
+                  <Label id="rating_2" fx:id="rating2Lbl" text="Rating" />
+                  <Label id="rating_3" fx:id="rating3Lbl" text="Rating" />
+                  <Label id="rating_4" fx:id="rating4Lbl" text="Rating" />
+                  <Label id="rating_5" fx:id="rating5Lbl" text="Rating" />
+                  <Label id="rating_6" fx:id="rating6Lbl" text="Rating" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" spacing="24.0">
+               <children>
+                  <Label id="costLbl1" fx:id="costLbl1" text="costLbl1" />
+                  <Label id="costLbl2" fx:id="costLbl2" text="costLbl2" />
+                  <Label id="costLbl3" fx:id="costLbl3" text="costLbl3" />
+                  <Label id="costLbl4" fx:id="costLbl4" text="costLbl4" />
+                  <Label id="costLbl5" fx:id="costLbl5" text="costLbl5" />
+                  <Label id="costLbl6" fx:id="costLbl6" text="costLbl6" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="241.0" prefWidth="46.0" spacing="24.0">
+               <children>
+                  <Label id="etaLbl1" fx:id="etaLbl1" text="ETA1" />
+                  <Label id="etaLbl2" fx:id="etaLbl2" text="ETA2" />
+                  <Label id="etaLbl3" fx:id="etaLbl3" text="ETA3" />
+                  <Label id="etaLbl4" fx:id="etaLbl4" text="ETA4" />
+                  <Label id="etaLbl5" fx:id="etaLbl5" text="ETA5" />
+                  <Label id="etaLbl6" fx:id="etaLbl6" text="ETA6" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Button id="schlep1" fx:id="schlepItBtn1" mnemonicParsing="false" onAction="#acceptBid" prefHeight="31.0" prefWidth="77.0" style="-fx-background-color: POWDERBLUE;" text="Schlep it!" textAlignment="CENTER" />
+                  <Button id="schlep2" fx:id="schlepItBtn2" mnemonicParsing="false" onAction="#acceptBid" prefHeight="31.0" prefWidth="76.0" style="-fx-background-color: POWDERBLUE;" text="Schlep it!" textAlignment="CENTER" />
+                  <Button fx:id="schlepItBtn3" mnemonicParsing="false" onAction="#acceptBid" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: POWDERBLUE;" text="Schlep it!" textAlignment="CENTER" />
+                  <Button fx:id="schlepItBtn4" mnemonicParsing="false" onAction="#acceptBid" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: POWDERBLUE;" text="Schlep it!" textAlignment="CENTER" />
+                  <Button fx:id="schlepItBtn5" mnemonicParsing="false" onAction="#acceptBid" prefHeight="31.0" prefWidth="76.0" style="-fx-background-color: POWDERBLUE;" text="Schlep it!" textAlignment="CENTER" />
+                  <Button fx:id="schlepItBtn6" mnemonicParsing="false" onAction="#acceptBid" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: POWDERBLUE;" text="Schlep it!" textAlignment="CENTER" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button id="backBtn" fx:id="backBtn" layoutX="23.0" layoutY="430.0" mnemonicParsing="false" onAction="#moveToPrvPage" style="-fx-background-color: POWDERBLUE;" text="Back" />
+      <Button id="nextBtn" fx:id="nextBtn" disable="true" layoutX="448.0" layoutY="430.0" mnemonicParsing="false" onAction="#moveToNextPage" style="-fx-background-color: POWDERBLUE;" text="Next" />
+      <HBox layoutX="24.0" layoutY="149.0" prefHeight="26.0" prefWidth="479.0" spacing="32.0" style="-fx-background-color: POWDERBLUE;">
+         <children>
+            <Label id="driverNameLbl" text="Driver Name" underline="true" wrapText="true" />
+            <Label id="driverRatingLbl" text="Driver Rating" underline="true" wrapText="true" />
+            <Label id="priceLbl" text="Price" underline="true" wrapText="true" />
+            <Label id="estTimeLbl" text="EST. Arrival Time" underline="true" wrapText="true" />
+            <Label id="bidBtnLbl" text="Click One" underline="true" wrapText="true" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

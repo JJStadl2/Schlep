@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="510.0" prefWidth="575.0" style="-fx-background-color: peachpuff;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Controllers.LoginViewController">
+   <children>
+      <VBox alignment="CENTER" layoutX="206.0" layoutY="148.0" prefHeight="215.0" prefWidth="163.0" spacing="10.0">
+         <children>
+            <Label fx:id="messageLbl" alignment="CENTER" prefHeight="17.0" prefWidth="167.0" text="Label" textFill="#e3493b" />
+            <Label alignment="CENTER" prefHeight="27.0" prefWidth="308.0" text="Please Login">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userEmail" />
+            <PasswordField fx:id="userPassword" />
+            <CheckBox mnemonicParsing="false" text="Remember Password" />
+            <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#moveToNextPage" style="-fx-background-color: POWDERBLUE;" text="Login" />
+         </children>
+      </VBox>
+      <Label alignment="CENTER_RIGHT" layoutX="72.0" layoutY="231.0" prefHeight="17.0" prefWidth="116.0" text="Username/Email" />
+      <Label alignment="CENTER_RIGHT" layoutX="109.0" layoutY="267.0" prefHeight="17.0" prefWidth="79.0" text="Password" />
+      <ImageView fitHeight="91.0" fitWidth="200.0" layoutX="198.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Documents/logo.PNG" />
+         </image>
+      </ImageView>
+
+      <BorderPane layoutX="188.0" prefHeight="91.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 10;" />
+      <Button fx:id="returnToCreateAcctBtn" layoutX="22.0" layoutY="460.0" mnemonicParsing="false" onAction="#returnToCreateAcctBtn" style="-fx-background-color: POWDERBLUE;" text="Go back to sign up" />
+
+   </children>
+</AnchorPane>

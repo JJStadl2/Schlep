@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="531.0" style="-fx-background-color: PEACHPUFF;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Controllers.PickupAddressController">
+   <children>
+      <VBox layoutX="2.0" layoutY="170.0" prefHeight="247.0" prefWidth="201.0" spacing="10.0">
+         <children>
+            <TextField fx:id="vendorNameTxFld" prefHeight="26.0" prefWidth="136.0" promptText="Enter Vendor Name" />
+            <TextField fx:id="streetNameTxFld" prefHeight="26.0" prefWidth="136.0" promptText="Street Name/Number" />
+            <TextField fx:id="zipCodeTxFld" prefHeight="26.0" prefWidth="136.0" promptText="Zip Code" />
+            <TextField fx:id="orderConfirmationTxFld" prefHeight="26.0" prefWidth="136.0" promptText="Order/Confirmation #" />
+            <TextField fx:id="specialInstructionsTxFld" alignment="TOP_LEFT" prefHeight="103.0" prefWidth="190.0" promptText="Enter Special Instructions Here" />
+         </children>
+      </VBox>
+      <Button id="nextBtn" fx:id="nextBtn" disable="true" layoutX="455.0" layoutY="430.0" mnemonicParsing="false" onAction="#moveToNxtPage" prefHeight="31.0" prefWidth="62.0" style="-fx-background-color: POWDERBLUE;" text="Next" textFill="WHITE" />
+      <Button id="backBtn" fx:id="backBtn" layoutX="16.0" layoutY="430.0" mnemonicParsing="false" onAction="#goToPrvPage" prefHeight="31.0" prefWidth="55.0" style="-fx-background-color: POWDERBLUE;" text="Back" textFill="WHITE" />
+      <ImageView fx:id="logo" fitHeight="114.0" fitWidth="241.0" layoutX="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Documents/logo.PNG" />
+         </image>
+      </ImageView>
+      <HBox id="menuHBox" layoutX="-1.0" layoutY="117.0" prefHeight="44.0" prefWidth="531.0" spacing="20.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="44.0" prefWidth="137.0">
+               <children>
+                  <Label fx:id="selectVendorLbL" contentDisplay="CENTER" prefHeight="17.0" prefWidth="121.0" text="Select Type of Vendor " textAlignment="CENTER" />
+                  <MenuButton fx:id="selectVendorMnBx" mnemonicParsing="false" onAction="#vendorSelected" prefHeight="26.0" prefWidth="132.0">
+                    <items>
+                      <MenuItem fx:id="prvtSellerMnItem" mnemonicParsing="false" onAction="#vendorSelected" text="Private Seller" />
+                      <MenuItem fx:id="commercialVendorMnItem" mnemonicParsing="false" onAction="#vendorSelected" text="Commercial vendor" />
+                    </items>
+                  </MenuButton>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="44.0" prefWidth="117.0">
+               <children>
+                  <Label id="countryLbl" fx:id="countryLbl" contentDisplay="CENTER" prefHeight="17.0" prefWidth="87.0" text="Select Country" textAlignment="CENTER" />
+                  <ChoiceBox id="countryBx" fx:id="selectCountryChoiceBx" prefWidth="150.0" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="44.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="selectStateLbl" text="Select State" />
+                  <ChoiceBox fx:id="selectStateChoiceBX" prefWidth="150.0" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="44.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="selectCityLbl" text="Select City" />
+                  <ChoiceBox fx:id="selectCityChoiceBx" prefWidth="150.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox alignment="TOP_CENTER" layoutX="214.0" layoutY="176.0" prefHeight="247.0" prefWidth="312.0" spacing="20.0">
+         <children>
+            <Label id="confirmationLbl" fx:id="orderProcessedMsgLbl" prefHeight="18.0" prefWidth="308.0" text="Please check the details you entered" textAlignment="CENTER" underline="true" visible="false" />
+            <Label id="detailLbl" fx:id="detailLbl" alignment="CENTER" prefHeight="187.0" prefWidth="310.0" text="Label" visible="false" />
+            <Button id="confirmationBtn" fx:id="confirmationBtn" mnemonicParsing="false" onAction="#confirmOrder" prefHeight="25.0" prefWidth="218.0" style="-fx-background-color: POWDERBLUE;" text="Confirm Order Details" textFill="WHITE" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

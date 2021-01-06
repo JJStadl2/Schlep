@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="anchor" fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="531.0" style="-fx-background-color: PEACHPUFF;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Controllers.DeliveryInfoController">
+   <children>
+      <DatePicker id="datePicker" fx:id="scheduleDeliveryDatePicker" disable="true" layoutX="374.0" layoutY="178.0" onAction="#setDate" prefHeight="25.0" prefWidth="157.0" promptText="Pick a Delivery Date" />
+      <MenuButton id="selectTimeMn" fx:id="selectTimeMnBtn" disable="true" layoutY="178.0" mnemonicParsing="false" onAction="#setWindow" text="Select Delivery Window">
+         <items>
+            <MenuItem id="time10_12" fx:id="selectedTime10_12MnItem" mnemonicParsing="false" onAction="#setWindow" text="10:00 a.m. - 12:00 p.m." />
+            <MenuItem id="time1_3" fx:id="selectedTime1_3MnItem" mnemonicParsing="false" onAction="#setWindow" text="1:00 p.m. - 3:00 p.m. " />
+            <MenuItem id="time3_5" fx:id="selectedTime3_5MnItem" mnemonicParsing="false" onAction="#setWindow" text="3:00 p.m. - 5:00 p.m." />
+            <MenuItem id="time5_7" fx:id="selectedTime5_7MnItem" mnemonicParsing="false" onAction="#setWindow" text="5:00 p.m. - 7:00 p.m." />
+            <MenuItem id="time7_9" fx:id="selectedTime7_9MnItem" mnemonicParsing="false" onAction="#setWindow" text="7:00 p.m. - 9:00 p.m." />
+            <MenuItem id="time9_11" fx:id="selectedTime9_11MnItem" mnemonicParsing="false" onAction="#setWindow" text="9:00 p.m. - 11:00 p.m." />
+         </items>
+      </MenuButton>
+      <VBox alignment="TOP_CENTER" layoutX="8.0" layoutY="7.0" prefHeight="151.0" prefWidth="515.0" spacing="10.0">
+         <children>
+            <ImageView id="logo" fx:id="logo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Documents/logo.PNG" />
+               </image>
+            </ImageView>
+            <MenuButton id="selectServiceMn" fx:id="selectServiceTypeMnuBtn" mnemonicParsing="false" onAction="#setType" prefHeight="25.0" prefWidth="204.0" text="Select Type of Service">
+              <items>
+                <MenuItem id="scheduledDelivery" fx:id="scheduledDeliveryMnuItem" mnemonicParsing="false" onAction="#setType" text="Scheduled Delivery" />
+                <MenuItem id="instantDelivery" fx:id="instantDeliveryMnuItem" mnemonicParsing="false" onAction="#setType" text="Instant Delivery (Added Fee)" />
+              </items>
+            </MenuButton>
+         </children>
+      </VBox>
+      <VBox id="detailsVBox" fx:id="detailsVBox" alignment="TOP_CENTER" layoutX="1.0" layoutY="218.0" prefHeight="143.0" prefWidth="531.0" spacing="15.0" style="-fx-background-color: white;">
+         <children>
+            <Label id="detailsHeaderLbl" fx:id="detailHeaderLbl" alignment="CENTER" contentDisplay="TOP" prefHeight="25.0" prefWidth="117.0" text="Deliver Details" textAlignment="CENTER" underline="true" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label id="deliveryTypeLbl" fx:id="deliveryTypeLbl" text="Delivery Type:" />
+            <Label id="whenLbl" fx:id="whenLbl" text="Delivery Window: " />
+            <Label id="willContactLbl" fx:id="willContactLbl" prefHeight="46.0" prefWidth="372.0" text="Your Schlepper will contact you 30 minutes before arriving at your drop off location" textAlignment="CENTER" wrapText="true" />
+         </children>
+      </VBox>
+      <Button id="backBtn" fx:id="backBtn" layoutX="21.0" layoutY="421.0" mnemonicParsing="false" onAction="#moveToPrvPage" style="-fx-background-color: POWDERBLUE;" text="Back" textFill="WHITE" />
+      <Button id="nextBtn" fx:id="nextBtn" disable="true" layoutX="464.0" layoutY="421.0" mnemonicParsing="false" onAction="#goToNextPage" style="-fx-background-color: POWDERBLUE;" text="Next" textFill="WHITE" />
+   </children>
+</AnchorPane>

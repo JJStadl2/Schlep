@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="469.0" prefWidth="531.0" style="-fx-background-color: PEACHPUFF;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Controllers.AddressSignUpController">
+   <children>
+      <ChoiceBox fx:id="countryBox" layoutX="189.0" layoutY="218.0" prefWidth="150.0" />
+      <Label layoutX="189.0" layoutY="201.0" text="Country" />
+      <ChoiceBox fx:id="stateBox" layoutX="189.0" layoutY="268.0" prefWidth="150.0" />
+      <Label layoutX="189.0" layoutY="250.0" text="State" />
+      <ChoiceBox fx:id="cityBox" layoutX="189.0" layoutY="318.0" prefWidth="150.0" />
+      <Label layoutX="189.0" layoutY="300.0" text="City" />
+      <TextField fx:id="userAddressLine1" layoutX="189.0" layoutY="137.0" prefHeight="25.0" prefWidth="149.0" promptText="Address Line 1" />
+      <TextField fx:id="userAddressLine2" layoutX="189.0" layoutY="169.0" promptText="Address Line 2" />
+      <TextField fx:id="userZipcode" layoutX="189.0" layoutY="350.0" promptText="Zipcode" />
+      <Label layoutX="212.0" layoutY="83.0" prefHeight="86.0" prefWidth="133.0" text="Enter Your Address" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="212.0" AnchorPane.rightAnchor="210.0" AnchorPane.topAnchor="83.0" />
+      <Button fx:id="nextBtn" layoutX="458.0" layoutY="422.0" mnemonicParsing="false" onAction="#saveAddressAndMove" style="-fx-background-color: POWDERBLUE;" text="Next" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="166.0">
+         <image>
+            <Image url="@../Documents/logo.PNG" />
+         </image>
+      </ImageView>
+      <Button fx:id="backBtn" layoutX="27.0" layoutY="422.0" mnemonicParsing="false" onAction="#goToPrvPage" prefHeight="18.0" prefWidth="42.0" style="-fx-background-color: POWDERBLUE;" text="Back" />
+   </children>
+</AnchorPane>
